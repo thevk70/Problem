@@ -1,0 +1,32 @@
+[
+  {
+    "Id": 12,
+    "fName": "Vishwajeet",
+    "lName": "Kumar",
+    "State": "Lakshadweep"
+  },
+  {
+    "Id": 13,
+    "fName": "Vishwajeet",
+    "lName": "Kumar",
+    "State": "Jammu and Kashmir"
+  },
+  {
+    "Id": 14,
+    "fName": "Vishwajeet",
+    "lName": "Kumar",
+    "State": "Gujarat"
+  },
+  {
+    "Id": 11,
+    "fName": "Kaushik",
+    "lName": "Kumarljk",
+    "State": "Assam"
+  },
+  {
+    "Id": 12,
+    "fName": "Vishwajeet",
+    "lName": "Kumar",
+    "State": "Andhra Pradesh"
+  }
+]
