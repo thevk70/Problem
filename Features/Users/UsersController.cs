@@ -19,16 +19,22 @@ namespace dotnet.Features.Users
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get(CancellationToken cancellationToken)
+        public async Task<IActionResult> Get([FromRoute] GetAll.QuerryRequest req, CancellationToken cancellationToken)
         {
-          return await _mediator.Send(new GetAll.QuerryRequest(),cancellationToken);
+          return await _mediator.Send(req, cancellationToken);
         }
 
+        /// <summary>
+        /// This method is used to return the object based on valid id suplied.
+        /// </summary>
+        /// <param name="request">An request object with id property for which result will be returned.</param>
+        /// <param name="cancellationToken"></param>
+        /// <returns>User object.</returns>
         [HttpGet]
-        [Route("userId:int")]
-        public async Task<IActionResult> GetUserById([FromRoute] int userId , CancellationToken cancellationToken)
+        [Route("{id}")]
+        public async Task<IActionResult> GetUserById([FromRoute] GetById.QuerryRequest request , CancellationToken cancellationToken)
         {
-            return await _mediator.Send(new GetId.QuerryRequest { id = userId},cancellationToken);
+            return await _mediator.Send(request, cancellationToken);
         }
     }
 }

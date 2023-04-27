@@ -1,12 +1,11 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
-namespace dotnet.Features.Users.GetId
+namespace dotnet.Features.Users.GetById
 {
 
         public class QuerryRequest : IRequest<IActionResult>
         {
-            [FromRoute]
             public int id { get; set; }
         }
 }
