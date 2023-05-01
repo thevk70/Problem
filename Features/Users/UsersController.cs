@@ -1,9 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using Users.Controllers;
 
 namespace dotnet.Features.Users
 {
@@ -35,6 +33,12 @@ namespace dotnet.Features.Users
         public async Task<IActionResult> GetUserById([FromRoute] GetById.QuerryRequest request , CancellationToken cancellationToken)
         {
             return await _mediator.Send(request, cancellationToken);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Post([FromRoute] Post.QueryRequest req, CancellationToken cancellationToken)
+        {
+            return await _mediator.Send(req, cancellationToken);
         }
     }
 }
